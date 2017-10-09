@@ -1,5 +1,5 @@
 /**
- * Created by jpilz on 2/13/17.
+ * Created by Griffin Pilz on 10/09/17.
  */
 "use strict";
 import {context} from '../../objects/context.js';
@@ -40,8 +40,6 @@ class headerModel {
     }
 
     handleEvent(eventObj) {
-        console.log(eventObj);
-        console.log("MODAL");
         this.selectedTicket(eventObj);
         console.log(this.selectedTicket());
     }
