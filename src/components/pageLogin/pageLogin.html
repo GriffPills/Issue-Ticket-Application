@@ -1,0 +1,87 @@
+<div class="container" data-bind="visible: visible, attr: {'component_name':componentName, 'id': id}" style="align-items: center; vertical-align: middle; margin-top: 13%;">
+    <div class="row" style="text-align: center;">
+        <div class="col-md-3">
+
+        </div>
+        <div class="col-md-6 flashThis" id="loginModal">
+            <div class="row">
+                <div>
+                    <img src="lib/atlanticcomputingtechnology.jpg" height="122" width="360"/>
+                </div>
+            </div>
+            <div class="row" style="padding-bottom: 20px;">
+                <div class="col-sm-2">
+
+                </div>
+                 <div class="col-sm-8">
+                    <h1 id="loginText">Issue Ticket Login</h1>
+                </div>
+                <div class="col-sm-2">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3 data-bind="visible: incorrectusername">Incorrect Username and/or Password</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-1" style="text-align: right; vertical-align: middle;">
+                </div>
+                <div class="col-md-10 form-group" style="display: inline-block;">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user" aria-hidden="true"></i></span>
+                        <input type="text" data-bind="value: username" class="form-control input-lg" name="username" placeholder="username" required="" autofocus=""/>
+                    </div>
+                </div>
+                <div class="col-sm-1">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1">
+
+                </div>
+                <div class="col-md-10 form-group" style="display: inline-block;">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock" aria-hidden="true"></i></span>
+                        <input type="password" data-bind="value: password" class="form-control input-lg" name="password" placeholder="password" required="" autofocus=""/>
+                    </div>
+                </div>
+                <div class="col-md-1">
+
+                </div>
+            </div>
+            <div class="row" style="margin-top: 10px;">
+                <div class="col-sm-3">
+
+                </div>
+                <div class="col-sm-6" style="align-items: center; padding-bottom: 10px;">
+                    <button class="btn btn-primary btn-lg btn-block" data-bind="click: checkUserName">Login</button>
+                </div>
+                <div class="col-sm-3">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+
+                </div>
+                <div class="col-sm-4">
+                    <a href="#" data-bind="click: handleRegistration">Still need to register?</a>
+                </div>
+                <div class="col-sm-4">
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+
+        </div>
+    </div>
+</div>
+<!-- Username:<br>
+<input type="text" name="username"  data-bind="value: username" id="userNameInput"><br>
+Password:<br>
+<input type="text" name="password" data-bind="value: password"><br>
+<button data-bind="click: handleLogin">Login</button> -->

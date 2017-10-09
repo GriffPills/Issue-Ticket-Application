@@ -1,0 +1,89 @@
+<div class="container" data-bind="visible:visible , attr: {'component_name':componentName, 'id': id}" style="justify-content: center; align-items: center; margin-top: 16%;">
+    <div class="col-md-1">
+
+    </div>
+    <div class="col-md-10" id="registerModal">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row" style="text-align: center; padding-bottom: 1px;">
+                    <div class="col-sm-4">
+
+                    </div>
+                    <div class="col-sm-4">
+                        <h1 id="loginText">Sign Up!</h1>
+                    </div>
+                    <div class="col-sm-4">
+
+                    </div>
+                </div>
+                <div class="row" style="text-align: center;">
+                    <div class="col-sm-3">
+
+                    </div>
+                    <div class="col-sm-6" style="padding-bottom: 5px;">
+                        <h4>Enter your details to gain access.</h4>
+                    </div>
+                    <div class="col-sm-3">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-tag" aria-hidden="true"></i></span>
+                            <input type="text" data-bind="value: firstname" class="form-control input-lg" name="fullname" placeholder="First Name" required="" autofocus="" />
+                        </div>
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user" aria-hidden="true"></i></span>
+                            <input type="text" data-bind="value: lastname" class="form-control input-lg" name="usernameinput" placeholder="Last Name" required="" autofocus="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i></span>
+                            <input type="text" data-bind="value: email" class="form-control input-lg" name="email" placeholder="Email" required="" autofocus="" />
+                        </div>
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock" aria-hidden="true"></i></span>
+                            <input type="password" data-bind="value: passwordinput" class="form-control input-lg" name="passwordinput" placeholder="Password" required="" autofocus="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i></span>
+                            <input type="text" data-bind="value: phonenumber" class="form-control input-lg" name="phonenumber" placeholder="Phone Number XXX-XXX-XXXX" required="" autofocus="" />
+                        </div>
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-briefcase" aria-hidden="true"></i></span>
+                            <input type="text" data-bind="value: company" class="form-control input-lg" name="company" placeholder="School/Company" required="" autofocus="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+
+                    </div>
+                    <div class="col-sm-4" style="align-items: center; padding-bottom: 10px;">
+                        <button class="btn btn-primary btn-lg btn-block" data-bind="click: handleBackToLogin">Submit</button>
+                    </div>
+                    <div class="col-sm-4">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-1">
+
+    </div>
+</div>

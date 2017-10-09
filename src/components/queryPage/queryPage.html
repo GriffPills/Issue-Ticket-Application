@@ -1,0 +1,136 @@
+<div class="container" data-bind="visible: visible, attr: {'component_name':componentName, 'id': id}">
+    <div class="col-md-12" style="justify-content: center;">
+        <div class="row" id="queryRow">
+            <div class="col-sm-2">
+                <h6>Select columns to show:</h6>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" data-bind="checked: wantsCustomerID"> Customer ID
+                    </label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" data-bind="checked: wantsFirstName"> Full Name
+                    </label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" data-bind="checked: wantsEmail"> Email
+                    </label>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" data-bind="checked: wantsSchoolCompany"> School/Company
+                    </label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" data-bind="checked: wantsPhone"> Phone
+                    </label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" data-bind="checked: wantsIssueNumber"> Issue Number
+                    </label>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" data-bind="checked: wantsIssueDate"> Issue Date
+                    </label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" data-bind="checked: wantsIssueDescription"> Issue Description
+                    </label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" data-bind="checked: wantsUrgency"> Urgency
+                    </label>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" data-bind="checked: wantsStatus"> Status
+                    </label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" data-bind="checked: wantsDueDate"> Date
+                    </label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" data-bind="checked: wantsNotes"> Notes
+                    </label>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" data-bind="checked: wantsAssignedTo"> Assigned To
+                    </label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" data-bind="checked: wantsLastName"> LastName
+                    </label>
+                </div>
+                <div>
+                    <button class="btn btn-primary btn-sm btn-block" data-bind="click: handleCustomerID">Apply</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+        </div>
+        <div style="overflow: auto;">
+            <table id="t01">
+                <tr id="tr01">
+                    <th>Select</th>
+                    <th data-bind="visible: showCustomerID">Customer ID</th>
+                    <th data-bind="visible: showFirstName">First Name</th>
+                    <th data-bind="visible: showEmail">Email</th>
+                    <th data-bind="visible: showSchoolCompany">School/Company</th>
+                    <th data-bind="visible: showPhone">Phone</th>
+                    <th data-bind="visible: showIssueNumber">Issue Number</th>
+                    <th data-bind="visible: showIssueDate">Issue Date</th>
+                    <th data-bind="visible: showIssueDescription">Issue Description</th>
+                    <th data-bind="visible: showUrgency">Urgency</th>
+                    <th data-bind="visible: showStatus">Status</th>
+                    <th data-bind="visible: showDueDate">Due Date</th>
+                    <th data-bind="visible: showNotes">Notes</th>
+                    <th data-bind="visible: showAssignedTo">Assigned To</th>
+                    <th data-bind="visible: showLastName">Last Name</th>
+                </tr>
+
+
+
+                <tr data-bind="foreach: ticketarray">
+                    <td><button class="btn btn-primary btn-sm" data-bind="click: $parent.modalPop">Select</button></td>
+                    <td data-bind="visible: $parent.showCustomerID, text: User_ID"></td>
+                    <td data-bind="visible: $parent.showFirstName, text: First_Name"></td>
+                    <td data-bind="visible: $parent.showEmail, text: email"></td>
+                    <td data-bind="visible: $parent.showSchoolCompany, text: School_or_Company"></td>
+                    <td data-bind="visible: $parent.showPhone, text: Phone_Number"></td>
+                    <td data-bind="visible: $parent.showIssueNumber, text: Issue_Number"></td>
+                    <td data-bind="visible: $parent.showIssueDate, text: Issue_Date"></td>
+                    <td data-bind="visible: $parent.showIssueDescription, text: Issue_Description"></td>
+                    <td data-bind="visible: $parent.showUrgency, text: Urgency"></td>
+                    <td data-bind="visible: $parent.showStatus, text: Status"></td>
+                    <td data-bind="visible: $parent.showDueDate, text: Due_Date">Date</td>
+                    <td data-bind="visible: $parent.showNotes, text: Notes">Notes</td>
+                    <td data-bind="visible: $parent.showAssignedTo, text: Current_Assignment">AssignedTo</td>
+                    <td data-bind="visible: $parent.showLastName, text: Last_Name"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
