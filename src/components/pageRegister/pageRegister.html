@@ -10,7 +10,7 @@
 
                     </div>
                     <div class="col-sm-4">
-                        <h1 id="loginText">Sign Up!</h1>
+                        <h1 id="loginText">Sign Up</h1>
                     </div>
                     <div class="col-sm-4">
 
@@ -20,7 +20,7 @@
                     <div class="col-sm-3">
 
                     </div>
-                    <div class="col-sm-6" style="padding-bottom: 5px;">
+                    <div class="col-sm-6" style="padding-bottom: 5px; color: #505050;">
                         <h4>Enter your details to gain access.</h4>
                     </div>
                     <div class="col-sm-3">
@@ -29,43 +29,55 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-6 form-group">
-                        <div class="input-group">
+                        <div class="input-group flashThisFN" data-bind="css: hassucFN">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-tag" aria-hidden="true"></i></span>
                             <input type="text" data-bind="value: firstname" class="form-control input-lg" name="fullname" placeholder="First Name" required="" autofocus="" />
+                            <span class="glyphicon glyphicon-ok form-control-feedback" data-bind="visible: hassuccglypFN"></span>
+                            <span class="glyphicon glyphicon-remove form-control-feedback" data-bind="visible: hasfailglypFN"></span>
                         </div>
                     </div>
                     <div class="col-sm-6 form-group">
-                        <div class="input-group">
+                        <div class="input-group flashThisLN" data-bind="css: hassucLN">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-user" aria-hidden="true"></i></span>
                             <input type="text" data-bind="value: lastname" class="form-control input-lg" name="usernameinput" placeholder="Last Name" required="" autofocus="" />
+                            <span class="glyphicon glyphicon-ok form-control-feedback" data-bind="visible: hassuccglypLN"></span>
+                            <span class="glyphicon glyphicon-remove form-control-feedback" data-bind="visible: hasfailglypLN"></span>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-6 form-group">
-                        <div class="input-group">
+                        <div class="input-group flashThisEM" data-bind="css: hassucEM">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i></span>
                             <input type="text" data-bind="value: email" class="form-control input-lg" name="email" placeholder="Email" required="" autofocus="" />
+                            <span class="glyphicon glyphicon-ok form-control-feedback" data-bind="visible: hassuccglypEM"></span>
+                            <span class="glyphicon glyphicon-remove form-control-feedback" data-bind="visible: hasfailglypEM"></span>
                         </div>
                     </div>
                     <div class="col-sm-6 form-group">
-                        <div class="input-group">
+                        <div class="input-group flashThisPW" data-bind="css: hassucPW">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-lock" aria-hidden="true"></i></span>
-                            <input type="password" data-bind="value: passwordinput" class="form-control input-lg" name="passwordinput" placeholder="Password" required="" autofocus="" />
+                            <input type="password" data-bind="value: password" class="form-control input-lg" name="passwordinput" placeholder="Password" required="" autofocus="" />
+                            <span class="glyphicon glyphicon-ok form-control-feedback" data-bind="visible: hassuccglypPW"></span>
+                            <span class="glyphicon glyphicon-remove form-control-feedback" data-bind="visible: hasfailglypPW"></span>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-6 form-group">
-                        <div class="input-group">
+                        <div class="input-group flashThisPN" data-bind="css: hassucPN">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i></span>
                             <input type="text" data-bind="value: phonenumber" class="form-control input-lg" name="phonenumber" placeholder="Phone Number XXX-XXX-XXXX" required="" autofocus="" />
+                            <span class="glyphicon glyphicon-ok form-control-feedback" data-bind="visible: hassuccglypPN"></span>
+                            <span class="glyphicon glyphicon-remove form-control-feedback" data-bind="visible: hasfailglypPN"></span>
                         </div>
                     </div>
                     <div class="col-sm-6 form-group">
-                        <div class="input-group">
+                        <div class="input-group flashThisCO" data-bind="css: hassucCO">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-briefcase" aria-hidden="true"></i></span>
                             <input type="text" data-bind="value: company" class="form-control input-lg" name="company" placeholder="School/Company" required="" autofocus="" />
+                            <span class="glyphicon glyphicon-ok form-control-feedback" data-bind="visible: hassuccglypPN"></span>
+                            <span class="glyphicon glyphicon-remove form-control-feedback" data-bind="visible: hasfailglypPN"></span>
                         </div>
                     </div>
                 </div>
@@ -74,7 +86,7 @@
 
                     </div>
                     <div class="col-sm-4" style="align-items: center; padding-bottom: 10px;">
-                        <button class="btn btn-primary btn-lg btn-block" data-bind="click: handleBackToLogin">Submit</button>
+                        <button class="btn btn-primary btn-lg btn-block" data-bind="click: handleValidation">Submit</button>
                     </div>
                     <div class="col-sm-4">
 

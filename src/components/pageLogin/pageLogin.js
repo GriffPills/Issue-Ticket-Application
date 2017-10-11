@@ -31,19 +31,6 @@ class pageLoginModel {
         this.visible(false);
     }
 
-    checkUserName() {
-
-        if (this.username() === "admin" && this.password() === "thereisnone") {
-            this.visible(false);
-            this.context.showquerypage(true);
-        } else if (this.username() === "guest" && this.password() === "guest") {
-            this.visible(false);
-            this.context.showticketpage(true);
-        } else {
-            this.incorrectusername(true);
-            $('.flashThis').animateCss('bounceIn');
-        }
-        }
 
     getAuthData() {
 
