@@ -17,6 +17,7 @@ class pageLoginModel {
         this.id = this.context.util.guid();
         this.visible = context.showlogin;
 
+        //variables
         this.password = ko.observable("");
         this.username = ko.observable("");
         this.incorrectpassword = ko.observable(false);
@@ -25,13 +26,13 @@ class pageLoginModel {
 
     }
 
-
+    //shows registration page and hides login
     handleRegistration() {
         this.context.showregistration(true);
         this.visible(false);
     }
 
-
+    //post authorization data to node.js. If matches a response, send to handleGetData
     getAuthData() {
 
         let url = context.apiUrl + '/auth';
@@ -49,6 +50,7 @@ class pageLoginModel {
         });
     }
 
+    //checks if the status is undefined
     handleGetData(data) {
 
         if (typeof data.status !== undefined) {
@@ -59,10 +61,9 @@ class pageLoginModel {
             $('.flashThis').animateCss('bounceIn');
             console.log("undefined");
         }
-
-
     }
 
+    //checks if the status is valid or invalid. This is set in the DB
     handleCheckValidity(data) {
         if (data.status === "Invalid") {
             this.incorrectusername(true);
@@ -74,6 +75,7 @@ class pageLoginModel {
         }
     }
 
+    //checks for Admin Boolean. Admin go to query. Customer go to ticket page
     handleCheckAdmin(data) {
         if (data.Admin === 1){
             this.visible(false);
@@ -88,8 +90,6 @@ class pageLoginModel {
     }
 
     }
-
-
 
 
 export default { viewModel: pageLoginModel, template: require('!raw-loader!./pageLogin.html') };

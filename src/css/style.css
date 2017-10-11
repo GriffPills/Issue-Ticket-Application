@@ -1,6 +1,7 @@
+
 body {
     color: black;
-    background-color: lightgray;
+    background-image: url('/lib/laptopOnDesk.jpg');
 }
 
 #loginText {
