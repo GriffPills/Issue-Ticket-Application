@@ -1,26 +1,52 @@
 
 body {
     color: black;
-    background-image: url('/lib/laptopOnDesk.jpg');
+    background-image: linear-gradient(15deg, #144967 0%, #78C7C1 100%);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    margin-bottom: auto;
+}
+
+.btn-primary {
+    color: #ffffff;
+    background-color: #52D1DC;
+    border-color: #52D1DC;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active {
+    color: #ffffff;
+    background-color: #828682;
+    border-color: #828682;
+}
+
+html, body {
+    height: 100%;
 }
 
 #loginText {
     font-family: Verdana, Geneva, sans-serif;
-    color: #555555;
+    color: #647472;
     font-weight: 600;
     font-size: 1.5em;
 }
 
 #thankYou {
     font-family: Verdana, Geneva, sans-serif;
-    color: #555555;
+    color: #647472;
     font-weight: bold;
     font-size: .5em;
 }
 
 #issueTicketText {
     font-family: Verdana, Geneva, sans-serif;
-    color: #555555;
+    color: #647472;
     font-weight: bold;
     font-size: 2em;
     padding-bottom: 10px;
@@ -45,7 +71,7 @@ table {
 }
 
 table#t01 tr#tr01 {
-    background-color: gray;
+    background-color: #B7B9B8;
 }
 
 table#t01 tr:nth-child(odd) {
@@ -63,6 +89,7 @@ h3 {
 
 h4 {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: #647472;
 }
 
 #registerModal {
@@ -72,8 +99,8 @@ h4 {
     padding-bottom: 30px;
     padding-top: 10px;
     border-radius: 20px;
-    border-width: 2px;
-    border-color: #AB9E9E;
+    border-width: 3px;
+    border-color: #9DB5B2;
     border-style: solid;
 }
 #loginModal {
@@ -82,18 +109,18 @@ h4 {
     padding-bottom: 30px;
     border-radius: 20px;
     border-style: solid;
-    border-color: #AB9E9E;
-    border-width: 2px;
+    border-color: #9DB5B2;
+    border-width: 3px;
 }
 
 #queryRow {
-    background-color: white;
+    background-color: #ffffff;
     padding-top: 10px;
     padding-bottom: 10px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border-style: solid;
-    border-color: gray;
+    border-color: #828682;
     border-width: 1px;
     margin-top: 20px;
     vertical-align: middle;
@@ -109,14 +136,15 @@ h4 {
     padding-bottom: 30px;
     border-radius: 20px;
     border-style: solid;
-    border-color: #AB9E9E;
-    border-width: 2px;
+    border-color: #9DB5B2;
+    border-width: 3px;
 }
 
 h2 {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 1.4em;
     font-weight: bold;
+    color: #647472;
 }
 
 #urgencyText {
@@ -137,6 +165,7 @@ h2 {
 h5 {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 20px;
+    color: #647472;
 }
 
 h6 {
