@@ -4,6 +4,8 @@
 "use strict";
 import {context} from '../../objects/context.js';
 import ko from 'knockout';
+import $ from 'jquery';
+import moment from 'moment';
 
 class workspaceModel {
 
@@ -14,16 +16,27 @@ class workspaceModel {
         this.id = this.context.util.guid();
         this.visible = context.showticketpage;
 
-        this.high = ko.observable("");
-        this.medium = ko.observable("");
-        this.low = ko.observable("");
+        this.radioSelected = ko.observable("3");
 
     }
 
     handleThankYouPage() {
         this.visible(false);
         this.context.showthankyoupage(true);
-        console.log("hi");
+    }
+
+    makeDateTime() {
+        let datetime = moment().format('YYYY-D-05 h:mm:ss');
+        console.log(datetime);
+        this.makeDueDateTime();
+    }
+
+    makeDueDateTime() {
+        let duedatetime = moment().format('YYYY-D-05 h:mm:ss');
+        console.log(duedatetime);
+
+        console.log(this.radioSelected());
+
     }
 
 }

@@ -2,7 +2,6 @@
  * Created by Griffin Pilz on 10/09/17.
  */
 import $ from 'jquery';
-
 import 'babel-polyfill';
 import ko from 'knockout';
 import 'bootstrap';

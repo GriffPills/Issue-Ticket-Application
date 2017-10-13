@@ -44,6 +44,7 @@ class pageLoginModel {
             data: {"email": this.username(), "Password": this.password()}
         }).then((response) => {
             this.handleGetData(response.data);
+            this.context.userObj(response.data);
         }).catch((error) =>{
             console.log("customerTable: getData Error");
             console.log(error);

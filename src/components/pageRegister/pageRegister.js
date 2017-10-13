@@ -6,6 +6,7 @@
 import {context} from '../../objects/context.js';
 import ko from 'knockout';
 import $ from 'jquery';
+import axios from 'axios';
 
 class pageRegisterModel {
 
@@ -71,6 +72,7 @@ class pageRegisterModel {
         }
 
         if (checkTF === true){
+            this.postCustomerUpdate();
             this.handleBackToLogin();
         } else {
             console.log("False");
@@ -183,6 +185,23 @@ class pageRegisterModel {
     handleBackToLogin() {
         this.context.showregistration(false);
         this.context.showlogin(true);
+    }
+
+    postCustomerUpdate() {
+
+        let url = context.apiUrl + '/customerUpdate';
+
+        axios({
+            url: url,
+            method: 'post',
+            headers: this.context.apiType,
+            data: {"UserID": 0, "email": this.email(), "Password": this.password(), "First_Name": this.firstname(), "Last_Name": this.lastname(), "Admin": 0, "School_or_Company": this.company(), "Phone_Number": this.phonenumber(), "Valid": 1}
+        }).then((response) => {
+            console.log(response.data);
+        }).catch((error) =>{
+            console.log("customerTable: getData Error");
+            console.log(error);
+        });
     }
 
 }

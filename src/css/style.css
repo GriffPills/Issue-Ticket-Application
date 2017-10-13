@@ -17,13 +17,18 @@ body {
     border-color: #52D1DC;
 }
 
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active,
 .btn-primary.active {
     color: #ffffff;
-    background-color: #828682;
-    border-color: #828682;
+    background-color: #52D1DC;
+    border-color: #52D1DC;
 }
 
 html, body {
@@ -52,33 +57,74 @@ html, body {
     padding-bottom: 10px;
 }
 
-table, tr, th {
-    border: 1px solid black;
-    padding: 15px;
+th {
+    border: 1px solid #ffffff;
+    border-bottom-width: 4px;
+    border-bottom-color: #9DB5B2;
+    padding: 3px;
     text-align: center;
+    margin-top: 10px;
+}
+
+tr:hover {
+    background-color: #f5f5f5
 }
 
 td {
-    border: 1px solid black;
+    border: 1px solid #ffffff;
 }
 
 #tr01 {
     justify-content: center;
 }
 
+#tr02 {
+    justify-content: center;
+}
+
+#tr03 {
+    justify-content: center;
+}
+
 table {
     width: 100%;
+    padding-right: 40px;
+    padding-left: 40px;
 }
 
 table#t01 tr#tr01 {
-    background-color: #B7B9B8;
+    background-color: #ffffff;
 }
 
 table#t01 tr:nth-child(odd) {
-    background-color: lightgray;
+    background-color: #ffffff;
 }
 
 table#t01 tr:nth-child(even) {
+    background-color: white;
+}
+
+table#t02 tr#tr02 {
+    background-color: #ffffff;
+}
+
+table#t02 tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+table#t02 tr:nth-child(even) {
+    background-color: white;
+}
+
+table#t03 tr#tr03 {
+    background-color: #ffffff;
+}
+
+table#t03 tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+table#t03 tr:nth-child(even) {
     background-color: white;
 }
 
@@ -113,22 +159,63 @@ h4 {
     border-width: 3px;
 }
 
-#queryRow {
-    background-color: #ffffff;
+
+#searchBarRow1 {
+    background-color: white;
     padding-top: 10px;
-    padding-bottom: 10px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-style: solid;
-    border-color: #828682;
-    border-width: 1px;
-    margin-top: 20px;
-    vertical-align: middle;
-    padding-left: 1px;
-    margin-left: 0px;
-    margin-right: 0px;
+    padding-bottom: 5px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-bottom: 10px;
+    margin-top: 40px;
 }
 
+#searchBarRow2 {
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-bottom: 10px;
+    margin-top: 40px;
+}
+
+#searchBarRow3 {
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-bottom: 10px;
+    margin-top: 40px;
+}
+
+#queryButtonRow {
+    font-weight: bold;
+    background-color: #81E4DA;
+    margin-top: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: #81E4DA;
+    border-width: 3px;
+}
+
+.btn-secondary {
+    color: #ffffff;
+    background-color: #81E4DA;
+    border-color: #81E4DA;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active,
+.btn-secondary.active {
+    color: #ffffff;
+    background-color: #78C7C1;
+    border-color: #78C7C1;
+}
 
 #workspaceModal {
     background-color: white;
@@ -150,7 +237,13 @@ h2 {
 #urgencyText {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 1.1em;
+    font-weight: 100;
     vertical-align: middle;
+    text-align: left;
+}
+
+label {
+    font-weight: normal;
 }
 
 #thankYouPageBackground {
@@ -176,4 +269,9 @@ h6 {
 
 .modal-content .modal-body .row {
     padding-top: 10px;
+}
+
+.col-sm-4 {
+    padding-left: 0px;
+    padding-right: 0px;
 }

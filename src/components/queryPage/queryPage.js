@@ -16,117 +16,57 @@ class queryPageModel {
         this.context = context;
         this.id = this.context.util.guid();
         this.visible = context.showquerypage;
-        this.ticketarray = ko.observableArray([]);
+        this.ticketarray1 = ko.observableArray([]);
+        this.ticketarray2 = ko.observableArray([]);
+        this.ticketarray3 = ko.observableArray([]);
 
-        this.wantsCustomerID = ko.observable(true);
-        this.wantsFirstName = ko.observable(true);
-        this.wantsEmail = ko.observable(true);
-        this.wantsSchoolCompany = ko.observable(true);
-        this.wantsPhone = ko.observable(true);
-        this.wantsIssueNumber = ko.observable(true);
-        this.wantsIssueDate = ko.observable(true);
-        this.wantsIssueDescription = ko.observable(true);
-        this.wantsUrgency = ko.observable(true);
-        this.wantsStatus = ko.observable(true);
-        this.wantsDueDate = ko.observable(true);
-        this.wantsNotes = ko.observable(true);
-        this.wantsAssignedTo = ko.observable(true);
-        this.wantsLastName = ko.observable(true);
+        this.showCustomers = ko.observable(true);
+        this.showAtlanticEmployees = ko.observable(false);
+        this.showIssues = ko.observable(false);
+        this.amIactive1 = ko.observable('active');
+        this.amIactive2 = ko.observable('');
+        this.amIactive3 = ko.observable('');
 
-        this.showCustomerID = ko.observable(true);
-        this.showFirstName = ko.observable(true);
-        this.showEmail = ko.observable(true);
-        this.showSchoolCompany = ko.observable(true);
-        this.showPhone = ko.observable(true);
-        this.showIssueNumber = ko.observable(true);
-        this.showIssueDate = ko.observable(true);
-        this.showIssueDescription = ko.observable(true);
-        this.showUrgency = ko.observable(true);
-        this.showStatus = ko.observable(true);
-        this.showDueDate = ko.observable(true);
-        this.showNotes = ko.observable(true);
-        this.showAssignedTo = ko.observable(true);
-        this.showLastName = ko.observable(true);
-
-        this.getData();
+        this.getData1();
+        this.getData2();
+        this.getData3();
     }
 
-    handleCustomerID() {
-        if (this.wantsCustomerID() === true) {
-            this.showCustomerID(true);
-        } else {
-            this.showCustomerID(false);
-        }
-        if (this.wantsFirstName() === true) {
-            this.showFirstName(true);
-        } else {
-            this.showFirstName(false);
-        }
-        if (this.wantsEmail() === true) {
-            this.showEmail(true);
-        } else {
-            this.showEmail(false);
-        }
-        if (this.wantsSchoolCompany() === true) {
-            this.showSchoolCompany(true);
-        } else {
-            this.showSchoolCompany(false);
-        }
-        if (this.wantsPhone() === true) {
-            this.showPhone(true);
-        } else {
-            this.showPhone(false);
-        }
-        if (this.wantsIssueNumber() === true) {
-            this.showIssueNumber(true);
-        } else {
-            this.showIssueNumber(false);
-        }
-        if (this.wantsIssueDate() === true) {
-            this.showIssueDate(true);
-        } else {
-            this.showIssueDate(false);
-        }
-        if (this.wantsIssueDescription() === true) {
-            this.showIssueDescription(true);
-        } else {
-            this.showIssueDescription(false);
-        }
-        if (this.wantsUrgency() === true) {
-            this.showUrgency(true);
-        } else {
-            this.showUrgency(false);
-        }
-        if (this.wantsStatus() === true) {
-            this.showStatus(true);
-        } else {
-            this.showStatus(false);
-        }
-        if (this.wantsDueDate() === true) {
-            this.showDueDate(true);
-        } else {
-            this.showDueDate(false);
-        }
-        if (this.wantsNotes() === true) {
-            this.showNotes(true);
-        } else {
-            this.showNotes(false);
-        }
-        if (this.wantsAssignedTo() === true) {
-            this.showAssignedTo(true);
-        } else {
-            this.showAssignedTo(false);
-        }
-        if (this.wantsLastName() === true) {
-            this.showLastName(true);
-        } else {
-            this.showLastName(false);
-        }
+    removeclass() {
+        this.amIactive1('');
+        this.amIactive2('');
+        this.amIactive3('');
     }
 
-    getData() {
+    wantsCustomers() {
+        this.showAtlanticEmployees(false);
+        this.showIssues(false);
+        this.showCustomers(true);
+        this.removeclass();
+        this.amIactive1('active');
 
-        this.ticketarray([]);
+    }
+
+    wantsAtlanticEmployees() {
+        this.showAtlanticEmployees(true);
+        this.showIssues(false);
+        this.showCustomers(false);
+        this.removeclass();
+        this.amIactive2('active');
+
+    }
+
+    wantsIssues() {
+        this.showAtlanticEmployees(false);
+        this.showIssues(true);
+        this.showCustomers(false);
+        this.removeclass();
+        this.amIactive3('active');
+    }
+
+    getData3() {
+
+        this.ticketarray3([]);
 
         let url = context.apiUrl + '/issues';
 
@@ -135,12 +75,48 @@ class queryPageModel {
             method: 'get',
             headers: this.context.apiType
         }).then((response) => {
-            this.handleGetData(response.data);
+            this.handleGetData3(response.data);
         }).catch((error) =>{
             console.log("customerTable: getData Error");
             console.log(error);
         });
     }
+
+    getData2() {
+
+        this.ticketarray2([]);
+
+        let url = context.apiUrl + '/atlanticEmployees';
+
+        axios({
+            url: url,
+            method: 'get',
+            headers: this.context.apiType
+        }).then((response) => {
+            this.handleGetData2(response.data);
+        }).catch((error) =>{
+            console.log("customerTable: getData Error");
+            console.log(error);
+        });
+    }
+
+    getData1() {
+
+        this.ticketarray1([]);
+
+        let url = context.apiUrl + '/customers';
+
+        axios({
+            url: url,
+            method: 'get',
+            headers: this.context.apiType
+        }).then((response) => {
+            this.handleGetData1(response.data);
+        }).catch((error) =>{
+            console.log("customerTable: getData Error");
+            console.log(error);
+        });
+    }
 
     modalPop(item, event) {
         /*this.context.showheader(true); */
@@ -148,21 +124,27 @@ class queryPageModel {
         context.eventManager.notifySubscribers(item,"sampleEvent");
     }
 
-    handleGetData(data) {
+    handleGetData1(data) {
 
-        console.log(data);
-        this.ticketarray(data);
+        console.log("this is ticket array 1");
+        this.ticketarray1(data);
+        console.log(this.ticketarray1());
 
-    /*
-            for(var i=0, len=data.length; i < len; i++)
-            {
-                let newItem = new customerObj(data[i]);
-                this.customerArray.push(newItem);
-    
-                //console.log(newItem);
-            }*/
         }
 
+    handleGetData2(data) {
+
+        console.log(data);
+        this.ticketarray2(data);
+
+    }
+
+    handleGetData3(data) {
+
+        console.log(data);
+        this.ticketarray3(data);
+
+    }
 
 
 }

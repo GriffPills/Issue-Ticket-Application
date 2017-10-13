@@ -15,6 +15,7 @@ class contextModel {
         this.location = ko.observable("n/a");
         this.paramObj = ko.observable();
         this.debug = ko.observable(false);
+        this.userObj = ko.observable("");
 
         //Registration Page
         this.showregistration = ko.observable(false);
@@ -51,6 +52,9 @@ class contextModel {
         this.apiContentType = {'Content-type': 'application/x-www-form-urlencoded; charset=utf-8'};
         this.apiType = {'Content-type': 'application/json; charset=utf-8'};
     }
+
+    //let userObj =
+
 }
 
 export let  context = new contextModel();

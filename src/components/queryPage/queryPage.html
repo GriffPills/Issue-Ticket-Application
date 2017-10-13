@@ -1,136 +1,202 @@
-<div class="container-fluid" data-bind="visible: visible, attr: {'component_name':componentName, 'id': id}">
-    <div class="col-lg-12" style="justify-content: center;">
-        <div class="row" id="queryRow">
-            <div class="col-sm-2" style="margin-top: 20px; text-align: center; align-content: center;">
-                <h6>Select columns to show:</h6>
-            </div>
-            <div class="col-sm-2">
-                <div class="form-check form-check-inline">
-                    <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" data-bind="checked: wantsCustomerID"> Customer ID
-                    </label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" data-bind="checked: wantsFirstName"> Full Name
-                    </label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" data-bind="checked: wantsEmail"> Email
-                    </label>
-                </div>
-            </div>
-            <div class="col-sm-2">
-                <div class="form-check form-check-inline">
-                    <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" data-bind="checked: wantsSchoolCompany"> School/Company
-                    </label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" data-bind="checked: wantsPhone"> Phone
-                    </label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" data-bind="checked: wantsIssueNumber"> Issue Number
-                    </label>
-                </div>
-            </div>
-            <div class="col-sm-2">
-                <div class="form-check form-check-inline">
-                    <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" data-bind="checked: wantsIssueDate"> Issue Date
-                    </label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" data-bind="checked: wantsIssueDescription"> Issue Description
-                    </label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" data-bind="checked: wantsUrgency"> Urgency
-                    </label>
-                </div>
-            </div>
-            <div class="col-sm-2">
-                <div class="form-check form-check-inline">
-                    <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" data-bind="checked: wantsStatus"> Status
-                    </label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" data-bind="checked: wantsDueDate"> Date
-                    </label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" data-bind="checked: wantsNotes"> Notes
-                    </label>
-                </div>
-            </div>
-            <div class="col-sm-2">
-                <div class="form-check form-check-inline">
-                    <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" data-bind="checked: wantsAssignedTo"> Assigned To
-                    </label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" data-bind="checked: wantsLastName"> LastName
-                    </label>
-                </div>
-                <div>
-                    <button class="btn btn-primary btn-md btn-block" data-bind="click: handleCustomerID">Apply</button>
-                </div>
-            </div>
-        </div>
+<div class="container-fluid" data-bind="visible: visible, attr: {'component_name':componentName, 'id': id}" style="align-content: center; justify-content: center; text-align: center;">
+    <div class="row">
         <div class="row">
+            <div class="col-sm-2">
 
+            </div>
+            <div class="col-sm-8"  id="queryButtonRow">
+                <div class="row" style="font-weight: bold;">
+                    <div class="col-sm-4">
+                        <button class="btn btn-secondary btn-lg btn-block" data-bind="click: wantsCustomers, css: amIactive1" style="font-weight: bold">Customers</button>
+                    </div>
+                    <div class="col-sm-4">
+                        <button class="btn btn-secondary btn-lg btn-block" data-bind="click: wantsAtlanticEmployees, css: amIactive2" style="font-weight: bold">Atlantic Employees</button>
+                    </div>
+                    <div class="col-sm-4">
+                        <button class="btn btn-secondary btn-lg btn-block" data-bind="click: wantsIssues, css: amIactive3" style="font-weight: bold">Issues</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+
+            </div>
         </div>
-        <div style="overflow: auto;">
-            <table id="t01">
-                <tr id="tr01">
-                    <th></th>
-                    <th data-bind="visible: showCustomerID">Customer ID</th>
-                    <th data-bind="visible: showFirstName">First Name</th>
-                    <th data-bind="visible: showEmail">Email</th>
-                    <th data-bind="visible: showSchoolCompany">School/Company</th>
-                    <th data-bind="visible: showPhone">Phone</th>
-                    <th data-bind="visible: showIssueNumber">Issue Number</th>
-                    <th data-bind="visible: showIssueDate">Issue Date</th>
-                    <th data-bind="visible: showIssueDescription">Issue Description</th>
-                    <th data-bind="visible: showUrgency">Urgency</th>
-                    <th data-bind="visible: showStatus">Status</th>
-                    <th data-bind="visible: showDueDate">Due Date</th>
-                    <th data-bind="visible: showNotes">Notes</th>
-                    <th data-bind="visible: showAssignedTo">Assigned To</th>
-                    <th data-bind="visible: showLastName">Last Name</th>
-                </tr>
 
+            <div class="row"  data-bind="visible: showCustomers">
+                <div class="col-sm-1">
 
+                </div>
+                <div class="col-sm-10 -align-center" id="searchBarRow1">
+                    <div class="row" style="justify-content: center; text-align: center; align-content: center; width: 100%">
+                        <div class="col-sm-4" style="text-align: left; margin-left: 10px">
+                            <h4>Customer Table</h4>
+                        </div>
+                        <div class="col-sm-4">
 
-                <tr data-bind="foreach: ticketarray">
-                    <td><button class="btn btn-primary btn-md" data-bind="click: $parent.modalPop">Update</button></td>
-                    <td data-bind="visible: $parent.showCustomerID, text: User_ID"></td>
-                    <td data-bind="visible: $parent.showFirstName, text: First_Name"></td>
-                    <td data-bind="visible: $parent.showEmail, text: email"></td>
-                    <td data-bind="visible: $parent.showSchoolCompany, text: School_or_Company"></td>
-                    <td data-bind="visible: $parent.showPhone, text: Phone_Number"></td>
-                    <td data-bind="visible: $parent.showIssueNumber, text: Issue_Number"></td>
-                    <td data-bind="visible: $parent.showIssueDate, text: Issue_Date"></td>
-                    <td data-bind="visible: $parent.showIssueDescription, text: Issue_Description"></td>
-                    <td data-bind="visible: $parent.showUrgency, text: Urgency"></td>
-                    <td data-bind="visible: $parent.showStatus, text: Status"></td>
-                    <td data-bind="visible: $parent.showDueDate, text: Due_Date">Date</td>
-                    <td data-bind="visible: $parent.showNotes, text: Notes">Notes</td>
-                    <td data-bind="visible: $parent.showAssignedTo, text: Current_Assignment">AssignedTo</td>
-                    <td data-bind="visible: $parent.showLastName, text: Last_Name"></td>
-                </tr>
-            </table>
+                        </div>
+                        <div class="col-sm-4">
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-1">
+
+                        </div>
+                        <div class="col-sm-10">
+                            <div class="row" >
+                                <div style="overflow: auto;">
+                                    <table id="t01">
+                                        <tr id="tr01">
+                                            <th></th>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Email</th>
+                                            <th>School/Company</th>
+                                            <th>Phone</th>
+                                            <th>Valid</th>
+                                        </tr>
+                                        <tbody>
+                                        <!-- ko foreach: ticketarray1 -->
+                                        <tr>
+                                            <td><button class="btn btn-primary btn-md">Update</button></td>
+                                            <td data-bind="text: First_Name"></td>
+                                            <td data-bind="text: Last_Name"></td>
+                                            <td data-bind="text: email"></td>
+                                            <td data-bind="text: School_or_Company"></td>
+                                            <td data-bind="text: Phone_Number"></td>
+                                            <td data-bind="text: Valid"></td>
+                                        </tr>
+                                        <!-- /ko -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-1">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <div class="row"  data-bind="visible: showAtlanticEmployees">
+            <div class="col-sm-1">
+
+            </div>
+            <div class="col-sm-10 -align-center" id="searchBarRow2">
+                <div class="row" style="justify-content: center; text-align: center; align-content: center; width: 100%">
+                    <div class="col-sm-4" style="text-align: left; margin-left: 10px">
+                        <h4>Atlantic Employees</h4>
+                    </div>
+                    <div class="col-sm-4">
+
+                    </div>
+                    <div class="col-sm-4">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-1">
+
+                    </div>
+                    <div class="col-sm-10">
+                        <div class="row" >
+                            <div style="overflow: auto;">
+                                <table id="t02">
+                                    <tr id="tr02">
+                                        <th></th>
+                                        <th>Worker ID</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Phone</th>
+                                        <th>Valid</th>
+                                    </tr>
+                                    <tbody>
+                                    <!-- ko foreach: ticketarray2 -->
+                                    <tr>
+                                        <td><button class="btn btn-primary btn-md">Update</button></td>
+                                        <td data-bind="text: WorkerID"></td>
+                                        <td data-bind="text: Name"></td>
+                                        <td data-bind="text: Email"></td>
+                                        <td data-bind="text: Phone"></td>
+                                        <td data-bind="text: Valid"></td>
+                                    </tr>
+                                    <!-- /ko -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+
+                    </div>
+                </div>
+            </div>
         </div>
+
+
+        <div class="row"  data-bind="visible: showIssues">
+            <div class="col-sm-1">
+
+            </div>
+            <div class="col-sm-10 -align-center" id="searchBarRow3">
+                <div class="row" style="justify-content: center; text-align: center; align-content: center; width: 100%">
+                    <div class="col-sm-4" style="text-align: left; margin-left: 10px">
+                        <h4>Issues</h4>
+                    </div>
+                    <div class="col-sm-4">
+
+                    </div>
+                    <div class="col-sm-4">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-1">
+
+                    </div>
+                    <div class="col-sm-10">
+                        <div class="row" >
+                            <div style="overflow: auto;">
+                                <table id="t03">
+                                    <tr id="tr03">
+                                        <th></th>
+                                        <th>Issue Number</th>
+                                        <th>User ID</th>
+                                        <th>School/Company</th>
+                                        <th>Issue Description</th>
+                                        <th>Issue Date</th>
+                                        <th>Due Date</th>
+                                        <th>Urgency</th>
+                                        <th>Status</th>
+                                        <th>Assigned To</th>
+                                    </tr>
+                                    <tbody>
+                                    <!-- ko foreach: ticketarray3 -->
+                                    <tr>
+                                        <td><button class="btn btn-primary btn-md">Update</button></td>
+                                        <td data-bind="text: Issue_Number"></td>
+                                        <td data-bind="text: User_ID"></td>
+                                        <td data-bind="text: School_or_Company"></td>
+                                        <td data-bind="text: Issue_Description"></td>
+                                        <td data-bind="text: Issue_Date"></td>
+                                        <td data-bind="text: Issue_Due_Date"></td>
+                                        <td data-bind="text: Urgency"></td>
+                                        <td data-bind="text: Status"></td>
+                                        <td data-bind="text: Current_Assignment"></td>
+                                    </tr>
+                                    <!-- /ko -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
