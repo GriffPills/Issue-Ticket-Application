@@ -44,7 +44,7 @@ class pageLoginModel {
             data: {"email": this.username(), "Password": this.password()}
         }).then((response) => {
             this.handleGetData(response.data);
-            this.context.userObj(response.data);
+            this.context.userObj(response.data[0]);
         }).catch((error) =>{
             console.log("customerTable: getData Error");
             console.log(error);
@@ -71,7 +71,6 @@ class pageLoginModel {
             $('.flashThis').animateCss('bounceIn');
             console.log("invalid");
         } else {
-            console.log(data);
             this.handleCheckAdmin(data[0]);
         }
     }
@@ -81,12 +80,9 @@ class pageLoginModel {
         if (data.Admin === 1){
             this.visible(false);
             this.context.showquerypage(true);
-            console.log("Admin");
         } else {
             this.visible(false);
             this.context.showticketpage(true);
-            console.log("Not an Admin");
-            console.log(data)
         }
     }
 

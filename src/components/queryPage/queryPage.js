@@ -126,22 +126,18 @@ class queryPageModel {
 
     handleGetData1(data) {
 
-        console.log("this is ticket array 1");
         this.ticketarray1(data);
-        console.log(this.ticketarray1());
 
         }
 
     handleGetData2(data) {
 
-        console.log(data);
         this.ticketarray2(data);
 
     }
 
     handleGetData3(data) {
 
-        console.log(data);
         this.ticketarray3(data);
 
     }

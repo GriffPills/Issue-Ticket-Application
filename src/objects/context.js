@@ -53,7 +53,6 @@ class contextModel {
         this.apiType = {'Content-type': 'application/json; charset=utf-8'};
     }
 
-    //let userObj =
 
 }
 

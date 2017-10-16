@@ -27,7 +27,7 @@
 
                     </div>
                     <div class="col-sm-10">
-                        <textarea class="form-control" rows="5" placeholder="Describe the problem..."></textarea>
+                        <textarea class="form-control" rows="5" placeholder="Describe the problem..." data-bind="value: issuedescription"></textarea>
                     </div>
                     <div class="col-sm-1">
 
@@ -88,7 +88,7 @@
 
                     </div>
                     <div class="col-sm-8">
-                            <button class="btn btn-primary btn-lg btn-block" data-bind="click: makeDateTime">Submit</button>
+                            <button class="btn btn-primary btn-lg btn-block" data-bind="click: postTicketInsert">Submit</button>
                     </div>
                     <div class="col-sm-2">
 

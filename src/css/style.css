@@ -72,6 +72,7 @@ tr:hover {
 
 td {
     border: 1px solid #ffffff;
+    margin: 10px;
 }
 
 #tr01 {
@@ -98,6 +99,7 @@ table#t01 tr#tr01 {
 
 table#t01 tr:nth-child(odd) {
     background-color: #ffffff;
+    margin-top: 10px;
 }
 
 table#t01 tr:nth-child(even) {
@@ -110,6 +112,7 @@ table#t02 tr#tr02 {
 
 table#t02 tr:nth-child(odd) {
     background-color: #ffffff;
+    margin-top: 10px;
 }
 
 table#t02 tr:nth-child(even) {
@@ -122,6 +125,7 @@ table#t03 tr#tr03 {
 
 table#t03 tr:nth-child(odd) {
     background-color: #ffffff;
+    margin-top: 10px;
 }
 
 table#t03 tr:nth-child(even) {
