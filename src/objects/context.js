@@ -20,6 +20,9 @@ class contextModel {
         //Registration Page
         this.showregistration = ko.observable(false);
 
+        //Calendar page
+        this.showcalendar = ko.observable(false);
+
         // Login page
         this.showlogin = ko.observable(true);
 
@@ -32,8 +35,17 @@ class contextModel {
         //query page
         this.showquerypage = ko.observable(false);
 
-        //modal view
+        //modal view customer
         this.showheader = ko.observable(true);
+
+        //modal view worker
+        this.showheader2 = ko.observable(true);
+
+        //modal view issue
+        this.showheader3 = ko.observable(true);
+
+        //modal view issue History
+        this.showheader4 = ko.observable(true);
 
         // Event manager
         this.eventManager = new ko.subscribable();

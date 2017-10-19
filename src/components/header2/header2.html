@@ -1,6 +1,6 @@
 <div class="container" data-bind="visible: visible">
     <!-- Modal -->
-    <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal fade" id="myModal2" role="dialog">
         <div class="modal-dialog">
 
             <!-- Modal content-->
@@ -21,17 +21,7 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-12">
-                                <input type="text" name="firstNamemodal" id="firstNamemodal" class="form-control input-lg" data-bind="value: selectedTicket().First_Name">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <h4>Last Name</h4>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <input type="text" name="lastNamemodal" id="lastNamemodal" class="form-control input-lg" data-bind="value: selectedTicket().Last_Name">
+                                <input type="text" name="Namemodal" id="Namemodal" class="form-control input-lg" data-bind="value: selectedTicket().Name">
                             </div>
                         </div>
                         <div class="row">
@@ -41,17 +31,7 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-12">
-                                <input type="text" name="emailmodal" id="emailmodal" class="form-control input-lg" data-bind="value: selectedTicket().email">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <h4>School_or_Company</h4>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <input type="text" name="schoolOrCompanymodal" id="schoolOrCompanymodal" class="form-control input-lg" data-bind="value: selectedTicket().School_or_Company">
+                                <input type="text" name="Emailmodal" id="Emailmodal" class="form-control input-lg" data-bind="value: selectedTicket().Email">
                             </div>
                         </div>
                         <div class="row">
@@ -61,7 +41,7 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-12">
-                                <input type="text" name="phoneNumbermodal" id="phoneNumbermodal" class="form-control input-lg" data-bind="value: selectedTicket().Phone_Number">
+                                <input type="text" name="phonemodal" id="phonemodal" class="form-control input-lg" data-bind="value: selectedTicket().Phone">
                             </div>
                         </div>
                         <div class="row">
@@ -78,7 +58,7 @@
                 </div>
 
                 <div class="modal-footer" style="align-content: center; text-align: center;">
-                    <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal" data-bind="click: updateCustomerModal">Update</button>
+                    <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal" data-bind="click: updateWorkerModal">Update</button>
                 </div>
             </div>
 

@@ -14,13 +14,17 @@ import 'font-awesome/css/font-awesome.css';
 
 ko.components.register('app-header', require('./components/header/header').default);
 ko.components.register('app-workspace', require('./components/workspace/workspace').default);
-ko.components.register('app-footer', require('./components/footer/footer').default);
+ko.components.register('app-calendar', require('./components/calendar/calendar').default);
 
 // Add Additional Components here
 ko.components.register('pagelogin', require('./components/pageLogin/pageLogin').default);
 ko.components.register('pageregister', require('./components/pageRegister/pageRegister').default);
 ko.components.register('thankyoupage', require('./components/thankYouPage/thankYouPage').default);
 ko.components.register('querypage', require('./components/queryPage/queryPage').default);
+ko.components.register('header2', require('./components/header2/header2').default);
+ko.components.register('header3', require('./components/header3/header3').default);
+ko.components.register('header4', require('./components/header4/header4').default);
+ko.components.register('calendar', require('./components/calendar/calendar').default);
 
 $.fn.extend({
     animateCss: function (animationName) {

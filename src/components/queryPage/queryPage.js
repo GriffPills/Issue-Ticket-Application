@@ -30,6 +30,19 @@ class queryPageModel {
         this.getData1();
         this.getData2();
         this.getData3();
+
+        this.context.eventManager.subscribe(() =>{
+            this.getData1();
+        },this, "reload customer");
+
+        this.context.eventManager.subscribe(() =>{
+            this.getData2();
+        },this, "reload worker");
+
+        this.context.eventManager.subscribe(() =>{
+            this.getData3();
+        },this, "reload issue");
+
     }
 
     removeclass() {
@@ -112,6 +125,8 @@ class queryPageModel {
             headers: this.context.apiType
         }).then((response) => {
             this.handleGetData1(response.data);
+            console.log(data);
+            console.log("here");
         }).catch((error) =>{
             console.log("customerTable: getData Error");
             console.log(error);
@@ -119,9 +134,23 @@ class queryPageModel {
     }
 
     modalPop(item, event) {
-        /*this.context.showheader(true); */
             $('#myModal').modal('show');
-        context.eventManager.notifySubscribers(item,"sampleEvent");
+        context.eventManager.notifySubscribers(item,"QueryEvent");
+    }
+
+    modalPop2(item, event) {
+        $('#myModal2').modal('show');
+        context.eventManager.notifySubscribers(item,"QueryEvent2");
+    }
+
+    modalPop3(item, event) {
+        $('#myModal3').modal('show');
+        context.eventManager.notifySubscribers(item,"QueryEvent3");
+    }
+
+    modalPop4(item, event) {
+        $('#myModal4').modal('show');
+        context.eventManager.notifySubscribers(item,"QueryEvent4");
     }
 
     handleGetData1(data) {
@@ -141,7 +170,6 @@ class queryPageModel {
         this.ticketarray3(data);
 
     }
-
 
 }
 

@@ -1,0 +1,107 @@
+<div class="container" data-bind="visible: visible">
+    <!-- Modal -->
+    <div class="modal fade" id="myModal4" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header" style="text-align: center;">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h2 class="modal-title">Issue History<span></span> Update Modal</h2>
+                </div>
+                <div class="modal-body col-sm-12" style="text-align: center">
+                    <div class="col-sm-2">
+
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="row" style="margin-bottom: 0px">
+                            <div class="col-sm-12">
+                                <h4>User ID</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <input type="text" name="User_IDmodal" id="User_IDmodal" class="form-control input-lg" data-bind="value: selectedTicket().User_ID">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h4>School/Company</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <input type="text" name="School_or_Companymodal" id="School_or_Companymodal" class="form-control input-lg" data-bind="value: selectedTicket().School_or_Company">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h4>Issue Description</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <input type="text" name="Issue_Descriptionmodal" id="Issue_Descriptionmodal" class="form-control input-lg" data-bind="value: selectedTicket().Issue_Description">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h4>Issue Date (YYYY-MM-DD hh:mm:ss)</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <input type="text" name="Issue_Datemodal" id="Issue_Datemodal" class="form-control input-lg" data-bind="value: selectedTicket().Issue_Date">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h4>Issue Due Date (YYYY-MM-DD hh:mm:ss)</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <input type="text" name="Issue_Due_Datemodal" id="Issue_Due_Datemodal" class="form-control input-lg" data-bind="value: selectedTicket().Issue_Due_Date">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h4>Urgency</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <input type="text" name="Urgencymodal" id="Urgencymodal" class="form-control input-lg" data-bind="value: selectedTicket().Urgency">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h4>Status</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <input type="text" name="Statusmodal" id="Statusmodal" class="form-control input-lg" data-bind="value: selectedTicket().Status">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h4>Current Assignment</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <input type="text" name="Current_Assignmentmodal" id="Current_Assignmentmodal" class="form-control input-lg" data-bind="value: selectedTicket().Current_Assignment">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer" style="align-content: center; text-align: center;">
+                    <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal" data-bind="click: updateIssueHistory">Update</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

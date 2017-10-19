@@ -22,16 +22,12 @@ class workspaceModel {
         this.datetime = moment().format('YYYY-MM-DD kk:mm:ss');
         this.duedatetime = moment().format('YYYY-MM-DD kk:mm:ss');
         this.issuedescription = ko.observable("");
-        this.test1 = "test;";
-        this.test2 = ko.observable("Test");
     }
 
-
-    handleThankYouPage() {
+    handleThankYou() {
         this.visible(false);
         this.context.showthankyoupage(true);
     }
-
 
     postTicketInsert() {
 
@@ -48,6 +44,8 @@ class workspaceModel {
             console.log("customerTable: getData Error");
             console.log(error);
         });
+
+        this.handleThankYou();
     }
 
 }

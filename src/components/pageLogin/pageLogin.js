@@ -32,6 +32,11 @@ class pageLoginModel {
         this.visible(false);
     }
 
+    handleCalendar() {
+        this.context.showcalendar(true);
+        this.visible(false);
+    }
+
     //post authorization data to node.js. If matches a response, send to handleGetData
     getAuthData() {
 

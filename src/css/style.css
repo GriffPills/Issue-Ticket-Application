@@ -132,16 +132,6 @@ table#t03 tr:nth-child(even) {
     background-color: white;
 }
 
-h3 {
-    color: red;
-    font-size: 15px;
-}
-
-h4 {
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    color: #647472;
-}
-
 #registerModal {
     background-color: white;
     padding-left: 20px;
@@ -231,13 +221,6 @@ h4 {
     border-width: 3px;
 }
 
-h2 {
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 1.4em;
-    font-weight: bold;
-    color: #647472;
-}
-
 #urgencyText {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 1.1em;
@@ -257,6 +240,43 @@ label {
     border-style: solid;
     border-color: #AB9E9E;
     border-width: 2px;
+}
+
+#CalendarHeader {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    justify-content: center;
+}
+
+#CalendarText {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #647472;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+h2 {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #647472;
+}
+
+h3 {
+    color: red;
+    font-size: 15px;
+}
+
+h4 {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: #647472;
+    margin-top: 10px;
+    margin-bottom: 0px;
 }
 
 h5 {

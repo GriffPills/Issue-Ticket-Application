@@ -58,7 +58,7 @@
                                         <tbody>
                                         <!-- ko foreach: ticketarray1 -->
                                         <tr style="margin-top: 40px;">
-                                            <td><button class="btn btn-primary btn-md">Update</button></td>
+                                            <td><button class="btn btn-primary btn-md" data-bind="click: $parent.modalPop">Update</button></td>
                                             <td data-bind="text: First_Name"></td>
                                             <td data-bind="text: Last_Name"></td>
                                             <td data-bind="text: email"></td>
@@ -114,7 +114,7 @@
                                     <tbody>
                                     <!-- ko foreach: ticketarray2 -->
                                     <tr style="margin-top: 40px;">
-                                        <td><button class="btn btn-primary btn-md">Update</button></td>
+                                        <td><button class="btn btn-primary btn-md" data-bind="click: $parent.modalPop2">Update</button></td>
                                         <td data-bind="text: WorkerID"></td>
                                         <td data-bind="text: Name"></td>
                                         <td data-bind="text: Email"></td>
@@ -161,6 +161,7 @@
                                 <table id="t03">
                                     <tr id="tr03">
                                         <th></th>
+                                        <th></th>
                                         <th>Issue Number</th>
                                         <th>User ID</th>
                                         <th>School/Company</th>
@@ -174,7 +175,8 @@
                                     <tbody>
                                     <!-- ko foreach: ticketarray3 -->
                                     <tr style="margin-top: 40px;">
-                                        <td><button class="btn btn-primary btn-md">Update</button></td>
+                                        <td><button class="btn btn-primary btn-md" data-bind="click: $parent.modalPop3">Update</button></td>
+                                        <td><button class="btn btn-primary btn-md" data-bind="click: $parent.modalPop4">Update</button></td>
                                         <td data-bind="text: Issue_Number"></td>
                                         <td data-bind="text: User_ID"></td>
                                         <td data-bind="text: School_or_Company"></td>
