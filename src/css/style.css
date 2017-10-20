@@ -299,3 +299,26 @@ h6 {
     padding-left: 0px;
     padding-right: 0px;
 }
+
+#dailyCalendarRow {
+    text-align: center;
+    justify-content: center;
+}
+
+#weeklyCalendarRow {
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 0px;
+}
+
+#dayWeekBackground {
+    background-color: white;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #AB9E9E;
+    border-width: 2px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}

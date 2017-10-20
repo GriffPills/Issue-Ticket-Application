@@ -25,6 +25,7 @@ ko.components.register('header2', require('./components/header2/header2').defaul
 ko.components.register('header3', require('./components/header3/header3').default);
 ko.components.register('header4', require('./components/header4/header4').default);
 ko.components.register('calendar', require('./components/calendar/calendar').default);
+ko.components.register('day', require('./components/day/day').default);
 
 $.fn.extend({
     animateCss: function (animationName) {

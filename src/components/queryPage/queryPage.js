@@ -128,8 +128,8 @@ class queryPageModel {
             console.log(data);
             console.log("here");
         }).catch((error) =>{
-            console.log("customerTable: getData Error");
-            console.log(error);
+            //console.log("customerTable: getData Error");
+            //console.log(error);
         });
     }
 
