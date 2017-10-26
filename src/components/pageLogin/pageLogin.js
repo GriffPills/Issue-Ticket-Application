@@ -50,6 +50,7 @@ class pageLoginModel {
         }).then((response) => {
             this.handleGetData(response.data);
             this.context.userObj(response.data[0]);
+            console.log(response.data[0]);
         }).catch((error) =>{
             console.log("customerTable: getData Error");
             console.log(error);
@@ -87,7 +88,7 @@ class pageLoginModel {
             this.context.showquerypage(true);
         } else {
             this.visible(false);
-            this.context.showticketpage(true);
+            this.context.showRouter(true);
         }
     }
 

@@ -23,9 +23,10 @@ ko.components.register('thankyoupage', require('./components/thankYouPage/thankY
 ko.components.register('querypage', require('./components/queryPage/queryPage').default);
 ko.components.register('header2', require('./components/header2/header2').default);
 ko.components.register('header3', require('./components/header3/header3').default);
-ko.components.register('header4', require('./components/header4/header4').default);
 ko.components.register('calendar', require('./components/calendar/calendar').default);
 ko.components.register('day', require('./components/day/day').default);
+ko.components.register('router', require('./components/router/router').default);
+ko.components.register('customertickethistory', require('./components/CustomerTicketHistory/CustomerTicketHistory').default);
 
 $.fn.extend({
     animateCss: function (animationName) {

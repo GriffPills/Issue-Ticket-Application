@@ -125,11 +125,9 @@ class queryPageModel {
             headers: this.context.apiType
         }).then((response) => {
             this.handleGetData1(response.data);
-            console.log(data);
-            console.log("here");
         }).catch((error) =>{
-            //console.log("customerTable: getData Error");
-            //console.log(error);
+            console.log("customerTable: getData Error");
+            console.log(error);
         });
     }
 

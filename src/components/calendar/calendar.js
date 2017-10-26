@@ -20,10 +20,11 @@ class footerModel {
         this.amIactiveWeekly = ko.observable('active');
         this.amIactiveDaily = ko.observable('');
 
-        this.showWeeklyCalendar = ko.observable(true);
-        this.showDailyCalendar = ko.observable(false);
 
-        this.showDay = ko.observable(1);
+        this.addWeekVisible = ko.observable(true);
+        this.subtractWeekVisible = ko.observable(true);
+
+        this.showDay = ko.observableArray([{day:0}]).extend({logChange: 'showDay Update'});
 
         this.dayArray = ko.observableArray([]).extend({logChange: 'Day Array Update'});
 
@@ -39,8 +40,6 @@ class footerModel {
         this.dayArray.push({day:2});
         this.dayArray.push({day:3});
         this.dayArray.push({day:4});
-        this.dayArray.push({day:5});
-        this.dayArray.push({day:6});
     }
 
 
@@ -49,33 +48,22 @@ class footerModel {
         this.amIactiveDaily('');
     }
 
-    wantsWeekly() {
-        this.removeclass();
-        this.amIactiveWeekly('active');
-        this.showWeeklyCalendar(true);
-        this.showDailyCalendar(false);
-    }
-
-    wantsDaily() {
-        this.removeclass();
-        this.amIactiveDaily('active');
-        this.showWeeklyCalendar(false);
-        this.showDailyCalendar(true);
-    }
-
 
     addOneDay() {
-        if (this.showDay() !== 7) {
-            this.showDay(this.showDay() + 1);
-            console.log(this.showDay);
-        }
+        let onlyDay = this.showDay()[this.showDay().length - 1].day;
+
+        this.showDay.removeAll();
+        this.showDay.push({day: eval(onlyDay + 1)});
+        this.showDay.valueHasMutated();
+        console.log(this.showDay());
     }
 
     subtractOneDay() {
-        if (this.showDay() !== 0) {
-            this.showDay(this.showDay() - 1);
-            console.log(this.showDay);
-        }
+        let onlyDay = this.showDay()[0].day;
+
+        this.showDay.removeAll();
+        this.showDay.push({day: eval(onlyDay - 1)});
+        this.showDay.valueHasMutated();
     }
 
     addOneWeek() {
@@ -83,11 +71,10 @@ class footerModel {
         let maxDay = this.dayArray()[this.dayArray().length - 1].day;
 
         console.log("maxday: ");
-        console.log(maxDay);
 
         this.dayArray.removeAll();
 
-        for(let i=1, len=8; i < len; i++)
+        for(let i=1, len=6; i < len; i++)
         {
             this.dayArray.push({day: eval(maxDay + i)});
         }
@@ -96,14 +83,12 @@ class footerModel {
     }
 
     subtractOneWeek() {
-        let minDay = this.dayArray()[this.dayArray().length - 6].day;
+        let minDay = this.dayArray()[this.dayArray().length - 4].day;
 
-        console.log("minday: ");
-        console.log(minDay);
 
         this.dayArray.removeAll();
 
-        for(let i=8, len=1; i > len; i--)
+        for(let i=6, len=1; i > len; i--)
         {
             this.dayArray.push({day: eval(minDay - i)});
         }

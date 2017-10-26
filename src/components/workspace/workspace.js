@@ -22,11 +22,34 @@ class workspaceModel {
         this.datetime = moment().format('YYYY-MM-DD kk:mm:ss');
         this.duedatetime = moment().format('YYYY-MM-DD kk:mm:ss');
         this.issuedescription = ko.observable("");
+        this.hassucID = ko.observable('');
     }
 
-    handleThankYou() {
-        this.visible(false);
-        this.context.showthankyoupage(true);
+    handleValidation() {
+        let checkTF = true;
+
+        if (this.checkIssueDescription() === false) {
+            checkTF = false;
+        }
+        if (checkTF === true){
+            this.duedatetime = moment().add(this.radioSelected(), 'days').format('YYYY-MM-DD kk:mm:ss');
+            this.postTicketInsert();
+        } else {
+            console.log("False");
+        }
+
+        return checkTF;
+    }
+
+    checkIssueDescription() {
+        if (this.issuedescription().length > 0) {
+            this.hassucID('has-success');
+            return true;
+        } else {
+            $('.flashThisID').animateCss('bounceIn');
+            this.hassucID('has-error');
+            return false;
+        }
     }
 
     postTicketInsert() {
@@ -44,8 +67,8 @@ class workspaceModel {
             console.log("customerTable: getData Error");
             console.log(error);
         });
-
-        this.handleThankYou();
+        this.visible(false);
+        this.context.showthankyoupage(true);
     }
 
 }

@@ -8,66 +8,79 @@
                 <div class="col-sm-2">
 
                 </div>
-                <div class="col-sm-8">
-                    <p id="CalendarText">Unresolved Tickets</p>
-                    <ul class="pagination">
-                        <li data-bind="click: wantsWeekly, css: amIactiveWeekly"><a href="#">Weekly</a></li>
-                        <li data-bind="click: wantsDaily, css: amIactiveDaily"><a href="#">Daily</a></li>
-                    </ul>
+                <div class="col-sm-8" style="text-align: center">
+                    <p id="CalendarText">Ticket Calendar</p>
                 </div>
                 <div class="col-sm-2">
 
                 </div>
             </div>
-            <!-- row for Weekly calendar-->
-            <div class="row" data-bind="visible: showWeeklyCalendar" id="weeklyCalendarRow">
-                <!-- Margin left -->
-                <div class="col-sm-1">
+            <div class="container-fluid visible-md visible-lg">
+                <div class="row" style="margin-bottom: 20px;">
+                    <div class="col-xs-1" style="align-items: center">
+                        <button data-bind="click: subtractOneWeek" class="btn btn-default btn-md"><span style="font-size:1.5em; margin: 0 0 0 0; padding: 0 0 0 0;" class="glyphicon glyphicon-circle-arrow-left"></span></button>
 
-                </div>
-                <!-- Button Left -->
-                <div class="col-sm-1">
-                    <button data-bind="click: subtractOneWeek" class="btn btn-lg"><span style="font-size:1.2em; margin: 0 0 0 0; padding: 0 0 0 0;" class="glyphicon glyphicon-circle-arrow-left"></span></button>
-                </div>
-                <!-- day -->
-                <div data-bind="foreach: dayArray">
-                    <day params="day: day"> </day>
-                </div>
-                <!-- Button Right -->
-                <div class="col-sm-1">
-                    <button data-bind="click: addOneWeek" class="btn btn-lg"><span style="font-size:1.2em; margin: 0 0 0 0; padding: 0 0 0 0;" class="glyphicon glyphicon-circle-arrow-right"></span></button>
-                </div>
-                <!-- margin right -->
-                <div class="col-sm-1">
+                    </div>
+                    <div class="col-xs-10">
 
+                    </div>
+                    <div class="col-xs-1">
+                        <button data-bind="click: addOneWeek" class="btn btn-default btn-md"><span style="font-size:1.5em; margin: 0 0 0 0; padding: 0 0 0 0;" class="glyphicon glyphicon-circle-arrow-right"></span></button>
+                    </div>
                 </div>
-            <!-- end of Weekly Calendar -->
+            </div>
+            <div class="container-fluid visible-lg visible-md">
+                <!-- row for Weekly calendar-->
+                <div class="row" id="weeklyCalendarRow">
+                    <!-- Margin Left -->
+                    <div class="col-md-1" id="weeklyCalendarLeftColumn">
+
+                    </div>
+                    <!-- day -->
+                    <div data-bind="foreach: dayArray" style="align-content: center;">
+                        <day params="day: day"> </day>
+                    </div>
+                    <!-- Margin Right -->
+                    <div class="col-md-1" id="weeklyCalendarRightColumn">
+
+                    </div>
+                    <!-- end of Weekly Calendar -->
+                </div>
             </div>
 
 
+            <div class="container-fluid visible-sm visible-xs">
+                <div class="row" style="margin-bottom: 20px;">
+                    <div class="col-xs-1" style="align-items: center">
+                        <button data-bind="click: subtractOneDay" class="btn btn-default btn-md"><span style="font-size:1.5em; margin: 0 0 0 0; padding: 0 0 0 0;" class="glyphicon glyphicon-circle-arrow-left"></span></button>
+
+                    </div>
+                    <div class="col-xs-10">
+
+                    </div>
+                    <div class="col-xs-1">
+                        <button data-bind="click: addOneDay" class="btn btn-default btn-md"><span style="font-size:1.5em; margin: 0 0 0 0; padding: 0 0 0 0;" class="glyphicon glyphicon-circle-arrow-right"></span></button>
+                    </div>
+                </div>
+            </div>
             <!-- Daily Calendar View -->
-            <div class="row" data-bind="visible: showDailyCalendar" id="dailyCalendarRow">
+            <div class="row visible-sm visible-xs" id="dailyCalendarRow">
                 <!-- Margin Left -->
                 <div class="col-sm-2">
 
                 </div>
                 <!-- Button Left -->
-                <div class="col-sm-2">
-                    <button data-bind="click: subtractOneDay" class="btn btn-lg"><span style="font-size:1.2em; margin: 0 0 0 0; padding: 0 0 0 0;" class="glyphicon glyphicon-circle-arrow-left"></span></button>
+                <div class="col-sm-3">
                 </div>
                 <!-- Ticket View -->
-                <div class="col-sm-4">
-                    <p data-bind="foreach: dayArray"></p>
-                    <div class="col-sm-12">
-
-                    </div>
+                <div data-bind="foreach: showDay" style="align-content: center">
+                    <day params="day: day"> </day>
                 </div>
                 <!-- Button Right -->
-                <div class="col-sm-2">
-                    <button data-bind="click: addOneDay" class="btn btn-lg"><span style="font-size:1.2em; margin: 0 0 0 0; padding: 0 0 0 0;" class="glyphicon glyphicon-circle-arrow-right"></span></button>
+                <div class="col-sm-3">
                 </div>
                 <!-- Margin Right -->
-                <div class="col-sm-2">
+                <div class="col-sm-3">
 
                 </div>
             <!-- end of Daily Calendar View -->

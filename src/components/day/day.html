@@ -1,6 +1,35 @@
 
-<div class="col-sm-1" data-bind="visible: visible" id="dayWeekBackground">
-    <div class="col-sm-12">
-        <h4 data-bind="text: title"></h4>
+<div class="col-md-2" data-bind="visible: visible" id="dayWeekBackground">
+    <div class="row">
+        <div class="col-sm-12">
+            <h4 data-bind="text: title" id="dayOfWeekTitle"></h4>
+        </div>
+    </div>
+    <div data-bind="foreach: ticketarrayIssues">
+        <div style="margin-top: 10px;">
+
+        </div>
+        <div id="dayIssueButton">
+            <table id="dayTable">
+                <tbody>
+                <tr>
+                    <th>Issue Number: </th>
+                    <td data-bind="text: Issue_Number">
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2" data-bind="text: School_or_Company">
+                    </th>
+                </tr>
+                <tr>
+                    <th colspan="2" data-bind="text: Issue_Description">
+                    </th>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="margin-bottom: 30px;">
+
+        </div>
     </div>
 </div>

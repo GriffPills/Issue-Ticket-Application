@@ -6,44 +6,43 @@
             </div>
             <div class="col-sm-6 flashThis" id="workspaceModal">
                 <div class="row">
-                    <div>
-                        <img src="lib/atlanticcomputingtechnology.jpg" height="122" width="360"/>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-2">
+                    <div class="col-xs-1">
 
                     </div>
-                    <div class="col-sm-8">
+                    <div class="col-xs-10">
                         <h1 id="issueTicketText">Issue Ticket</h1>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-xs-1">
 
                     </div>
                 </div>
-
+                <div class="row">
+                    <div class="col-xs-12" style="text-align: center;">
+                        <h2 id="describeIssueText">Please Describe the Issue</h2>
+                    </div>
+                </div>
                 <div class="row form-group">
-                    <div class="col-sm-1">
+                    <div class="col-xs-1">
 
                     </div>
-                    <div class="col-sm-10">
-                        <textarea class="form-control" rows="5" placeholder="Describe the problem..." data-bind="value: issuedescription"></textarea>
+                    <div class="col-xs-10 form-group" data-bind="css: hassucID">
+                        <textarea class="form-control flashThisID" rows="5" placeholder="" data-bind="value: issuedescription"></textarea>
                     </div>
-                    <div class="col-sm-1">
+                    <div class="col-xs-1">
 
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-sm-12" style="text-align: center;">
-                        <h2>What is the urgency of the repair?</h2>
+                    <div class="col-xs-12" style="text-align: center;">
+                        <h2 id="urgencyQuestionText">What is the urgency of the repair?</h2>
                     </div>
                 </div>
                 <div class="row" style="text-align: left;">
-                    <div class="col-sm-5">
+                    <div class="col-xs-5">
 
                     </div>
-                    <div class="col-sm-3" id="urgencyText">
+                    <div class="col-xs-3" id="urgencyText">
                         <div class="row">
                             <label><input type="radio" value="3" data-bind="checked: radioSelected" /> High</label>
                         </div>
@@ -54,31 +53,33 @@
                             <label><input type="radio" value="7" data-bind="checked: radioSelected" /> Low</label>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-xs-4">
 
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-sm-1">
+                    <div class="col-xs-1">
 
                     </div>
-                    <div class="col-sm-10" style="text-align: center;">
-                        <h2>File Attachment</h2>
+                    <div class="col-xs-10" style="text-align: center;">
+                        <h2 id="fileAttachmentText">File Attachment<span class="glyphicon glyphicon-open-file" style="padding-left: 3px"></span></h2>
                     </div>
-                    <div class="col-sm-1">
+                    <div class="col-xs-1">
 
                     </div>
                 </div>
 
                 <div class="row" style="padding-bottom: 20px;">
-                    <div class="col-sm-2">
+                    <div class="col-xs-2">
 
                     </div>
-                    <div class="col-sm-8" style="width: 100%">
-                            <span class="btn btn-default btn-file"><input type="file"></span>
+                    <div class="col-xs-8" style="width: 100%">
+                        <label class="btn btn-default">
+                            Browse <input type="file" hidden>
+                        </label>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-xs-2">
 
                     </div>
                 </div>
@@ -88,7 +89,7 @@
 
                     </div>
                     <div class="col-sm-8">
-                            <button class="btn btn-primary btn-lg btn-block" data-bind="click: postTicketInsert">Submit</button>
+                            <button class="btn btn-primary btn-lg btn-block" data-bind="click: handleValidation">Submit</button>
                     </div>
                     <div class="col-sm-2">
 
