@@ -20,6 +20,9 @@ class contextModel {
         //Registration Page
         this.showregistration = ko.observable(false);
 
+        //issue history display for modal
+        this.showissueHistoryBox = ko.observable(false);
+
         //customer ticket history
         this.showCustomerTicketHistory = ko.observable(false);
 

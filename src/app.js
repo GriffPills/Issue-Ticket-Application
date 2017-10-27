@@ -27,6 +27,7 @@ ko.components.register('calendar', require('./components/calendar/calendar').def
 ko.components.register('day', require('./components/day/day').default);
 ko.components.register('router', require('./components/router/router').default);
 ko.components.register('customertickethistory', require('./components/CustomerTicketHistory/CustomerTicketHistory').default);
+ko.components.register('issuehistorybox', require('./components/issueHistoryBox/issueHistoryBox').default);
 
 $.fn.extend({
     animateCss: function (animationName) {

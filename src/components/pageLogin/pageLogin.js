@@ -32,11 +32,6 @@ class pageLoginModel {
         this.visible(false);
     }
 
-    handleCalendar() {
-        this.context.showcalendar(true);
-        this.visible(false);
-    }
-
     //post authorization data to node.js. If matches a response, send to handleGetData
     getAuthData() {
 
@@ -83,9 +78,12 @@ class pageLoginModel {
 
     //checks for Admin Boolean. Admin go to query. Customer go to ticket page
     handleCheckAdmin(data) {
-        if (data.Admin === 1){
+        if (data.Admin === 1) {
             this.visible(false);
             this.context.showquerypage(true);
+        } else if (data.Admin === 2) {
+            this.visible(false);
+            this.context.showcalendar(true);
         } else {
             this.visible(false);
             this.context.showRouter(true);

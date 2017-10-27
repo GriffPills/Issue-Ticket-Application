@@ -21,7 +21,7 @@ class queryPageModel {
         this.ticketarray3 = ko.observableArray([]);
 
         this.showCustomers = ko.observable(true);
-        this.showAtlanticEmployees = ko.observable(false);
+        this.showEmployees = ko.observable(false);
         this.showIssues = ko.observable(false);
         this.amIactive1 = ko.observable('active');
         this.amIactive2 = ko.observable('');
@@ -52,7 +52,7 @@ class queryPageModel {
     }
 
     wantsCustomers() {
-        this.showAtlanticEmployees(false);
+        this.showEmployees(false);
         this.showIssues(false);
         this.showCustomers(true);
         this.removeclass();
@@ -60,8 +60,8 @@ class queryPageModel {
 
     }
 
-    wantsAtlanticEmployees() {
-        this.showAtlanticEmployees(true);
+    wantsEmployees() {
+        this.showEmployees(true);
         this.showIssues(false);
         this.showCustomers(false);
         this.removeclass();
@@ -70,7 +70,7 @@ class queryPageModel {
     }
 
     wantsIssues() {
-        this.showAtlanticEmployees(false);
+        this.showEmployees(false);
         this.showIssues(true);
         this.showCustomers(false);
         this.removeclass();
@@ -93,13 +93,14 @@ class queryPageModel {
             console.log("customerTable: getData Error");
             console.log(error);
         });
+
     }
 
     getData2() {
 
         this.ticketarray2([]);
 
-        let url = context.apiUrl + '/atlanticEmployees';
+        let url = context.apiUrl + '/employees';
 
         axios({
             url: url,

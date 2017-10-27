@@ -10,7 +10,7 @@
                         <button class="btn btn-secondary btn-lg btn-block" data-bind="click: wantsCustomers, css: amIactive1" style="font-weight: bold">Customers</button>
                     </div>
                     <div class="col-sm-4">
-                        <button class="btn btn-secondary btn-lg btn-block" data-bind="click: wantsAtlanticEmployees, css: amIactive2" style="font-weight: bold">Atlantic Employees</button>
+                        <button class="btn btn-secondary btn-lg btn-block" data-bind="click: wantsEmployees, css: amIactive2" style="font-weight: bold">Employees</button>
                     </div>
                     <div class="col-sm-4">
                         <button class="btn btn-secondary btn-lg btn-block" data-bind="click: wantsIssues, css: amIactive3" style="font-weight: bold">Issues</button>
@@ -68,7 +68,7 @@
                 </div>
             </div>
 
-        <div class="row"  data-bind="visible: showAtlanticEmployees">
+        <div class="row"  data-bind="visible: showEmployees">
             <div class="col-sm-1">
 
             </div>
@@ -92,7 +92,7 @@
                                     <tbody>
                                     <!-- ko foreach: ticketarray2 -->
                                     <tr style="margin-top: 40px;">
-                                        <td><button class="btn btn-primary btn-md" data-bind="click: $parent.modalPop2">Update</button></td>
+                                        <td><button class="btn btn-secondary btn-md" data-bind="click: $parent.modalPop2">Update</button></td>
                                         <td data-bind="text: WorkerID"></td>
                                         <td data-bind="text: Name"></td>
                                         <td data-bind="text: Email"></td>

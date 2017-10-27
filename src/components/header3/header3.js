@@ -27,6 +27,8 @@ class headerModel {
         this.Current_Assignment = ko.observable("");
         this.selectedTicket = ko.observable({Issue_Number: " ", User_ID: " ", School_or_Company: " ", Issue_Description: " ", Issue_Date: " ", Issue_Due_Date: " ", Urgency: " ", Status: " ", Current_Assignment: " "});
 
+        this.issueHistoryArray = ko.observableArray([]);
+
         //Subscribing
         this.context.eventManager.subscribe((eventObj) =>{
             this.handleEvent(eventObj);
@@ -37,6 +39,7 @@ class headerModel {
     handleEvent(eventObj) {
         this.selectedTicket(eventObj);
         console.log(this.selectedTicket());
+        this.getHistory();
     }
 
     updateCustomerModal() {
@@ -51,6 +54,26 @@ class headerModel {
         }).then((response) => {
             console.log(response.data);
             context.eventManager.notifySubscribers(null,"reload issue");
+        }).catch((error) =>{
+            console.log("customerTable: getData Error");
+            console.log(error);
+        });
+
+    }
+
+    getHistory() {
+
+        let url = context.apiUrl + '/issuesHistoryget';
+
+        axios({
+            url: url,
+            method: 'post',
+            headers: this.context.apiType,
+            data: {"Issue_Number": this.selectedTicket().Issue_Number}
+        }).then((response) => {
+            console.log("Issue History Get");
+            console.log(response.data);
+            this.issueHistoryArray(response.data);
         }).catch((error) =>{
             console.log("customerTable: getData Error");
             console.log(error);

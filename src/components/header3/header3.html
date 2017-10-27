@@ -7,13 +7,10 @@
             <div class="modal-content">
                 <div class="modal-header" style="text-align: center;">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h2 class="modal-title">Customer <span></span> Update Modal</h2>
+                    <h2 class="modal-title">Issue <span></span> Update Modal</h2>
                 </div>
                 <div class="modal-body col-sm-12" style="text-align: center">
-                    <div class="col-sm-2">
-
-                    </div>
-                    <div class="col-sm-8">
+                    <div class="col-sm-6"  id="issueHistory">
                         <div class="row" style="margin-bottom: 0px">
                             <div class="col-sm-12">
                                 <h4>User ID</h4>
@@ -93,6 +90,15 @@
                             <div class="col-sm-12">
                                 <input type="text" name="Current_Assignmentmodal" id="Current_Assignmentmodal" class="form-control input-lg" data-bind="value: selectedTicket().Current_Assignment">
                             </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Issue History -->
+
+                    <div class="col-sm-6">
+                        <div data-bind="foreach: issueHistoryArray" style="align-content: center;" id="issueSticky">
+                            <issuehistorybox params="data: $data"></issuehistorybox>
                         </div>
                     </div>
                 </div>

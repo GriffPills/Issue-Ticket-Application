@@ -37,7 +37,7 @@ class headerModel {
 
     updateWorkerModal() {
 
-        let url = context.apiUrl + '/workerModalUpdate';
+        let url = context.apiUrl + '/employeeModalUpdate';
 
         axios({
             url: url,

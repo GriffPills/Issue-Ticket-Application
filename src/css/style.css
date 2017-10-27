@@ -99,10 +99,62 @@ td {
     justify-content: left;
 }
 
-table#dayTable th {
+#issueTable {
+    background:#fefabc;
+    justify-content: left;
+    padding: 5em;
+    -webkit-transform:rotate(-3deg);
+    -o-transform:rotate(-3deg);
+    -moz-transform:rotate(-3deg);
+    position:relative;
+    box-shadow: 0px 4px 6px #333;
+    -moz-box-shadow: 0px 4px 6px #333;
+    -webkit-box-shadow: 0px 4px 6px #333;
+}
+
+#issueTable:hover {
+    background:#fefabc;
+    justify-content: left;
+    padding: 5em;
+    -webkit-transform:rotate(0deg);
+    -o-transform:rotate(0deg);
+    -moz-transform:rotate(0deg);
+    position:relative;
+    box-shadow: 0px 4px 6px #333;
+    -moz-box-shadow: 0px 4px 6px #333;
+    -webkit-box-shadow: 0px 4px 6px #333;
+}
+
+table#issueTable th {
     font-family: 'Saira Semi Condensed', sans-serif;
     color: #647472;
+    font-weight: 800;
+    font-size: 1em;
+    border: 1px solid #fefabc;
+    border-bottom-width: 1px;
+    border-bottom-color: #fefabc;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+table#issueTable td {
+    font-family: 'Saira Semi Condensed', sans-serif;
+    overflow:auto;
+    color: #647472;
+    border-bottom-width: 1px;
+    border-bottom-color: #fefabc;
     font-weight: 500;
+    font-size: 1em;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+table#dayTable th {
+    font-family: 'Ubuntu', sans-serif;
+    color: #647472;
+    font-weight: bold;
     font-size: 1em;
     border: 1px solid #ffffff;
     border-bottom-width: 1px;
@@ -248,20 +300,20 @@ table#t03 tr:nth-child(even) {
 
 #queryButtonRow {
     font-weight: bold;
-    background-color: #54EDFF;
+    background-color: #56A3A6;
     margin-top: 40px;
     padding-top: 5px;
     padding-bottom: 5px;
     border-radius: 20px;
     border-style: solid;
-    border-color: #54EDFF;
+    border-color: #56A3A6;
     border-width: 3px;
 }
 
 .btn-secondary {
     color: #ffffff;
-    background-color: #54EDFF;
-    border-color: #54EDFF;
+    background-color: #56A3A6;
+    border-color: #56A3A6;
 }
 
 .btn-secondary:hover,
@@ -269,16 +321,16 @@ table#t03 tr:nth-child(even) {
 .btn-secondary:active,
 .btn-secondary.active {
     color: #ffffff;
-    background-color: #4DD8E8;
-    border-color: #4DD8E8;
+    background-color: #59b6ba;
+    border-color: #59b6ba;
 }
 
 .btn:active, .btn.active {
     background-image: none;
     outline: 0;
-    -moz-box-shadow:    inset 0 0 15px #4DD8E8;
-    -webkit-box-shadow: inset 0 0 15px #4DD8E8;
-    box-shadow:         inset 0 0 15px #4DD8E8;
+    -moz-box-shadow:    inset 0 0 15px #59b6ba;
+    -webkit-box-shadow: inset 0 0 15px #59b6ba;
+    box-shadow:         inset 0 0 15px #59b6ba;
 }
 
 #workspaceModal {
@@ -414,6 +466,15 @@ h6 {
     margin-bottom: 2px;
     margin-right: 3px;
     margin-left: 3px;
+}
+
+#issueHistory {
+    border-color: #647472;
+    border-style: solid;
+    border-left-width: 0px;
+    border-right-width: 2px;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
 }
 
 .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
