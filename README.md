@@ -7,7 +7,7 @@ To install:
 
 git init
 
-git pull https://github.com/jpilz/knockoutApp.git
+git pull https://github.com/GriffPills/Issue-Ticket-Application.git
 
 npm install
 
