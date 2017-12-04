@@ -7,7 +7,7 @@ To install:
 
 git init
 
-git pull https://github.com/GriffPills/Issue-Ticket-Application.git
+git pull https://github.com/GriffinPilz/Issue-Ticket-Application.git
 
 npm install
 
