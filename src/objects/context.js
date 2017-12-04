@@ -63,11 +63,11 @@ class contextModel {
         if(window.location.hostname.indexOf("localhost") != -1)
         {
             //development
-            this.apiUrl = 'http://localhost:8000/api/atlantic';
+            this.apiUrl = 'http://localhost:8000/api/company';
         }
         else
         {
-            this.apiUrl = 'http://api.atlantic.com';
+            this.apiUrl = 'http://api.company.com';
         }
 
         this.apiContentType = {'Content-type': 'application/x-www-form-urlencoded; charset=utf-8'};
