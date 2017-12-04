@@ -2,7 +2,7 @@
  * Created by jpilz on 2/13/17.
  */
 "use strict";
-import {context} from '../../objects/context.js';
+import b{context} from '../../objects/context.js';
 import ko from 'knockout';
 import $ from 'jquery';
 import axios from 'axios';
